@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\user\\desktop\\nbc\\chapter_4\\chatx\\source\\chatx\\chatx.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\user\\desktop\\nbc\\chapter_4\\chatx\\intermediate\\build\\win64\\x64\\chatxeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\chatx\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\chatx\\definitions.chatx.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\chatx\\source\\chatx\\chatx.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
