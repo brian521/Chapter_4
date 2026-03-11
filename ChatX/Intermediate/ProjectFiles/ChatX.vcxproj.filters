@@ -48,14 +48,41 @@
     <ClCompile Include="..\..\Source\ChatX\Game\CXGameModeBase.h">
       <Filter>Source\ChatX\Game</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ChatX\Game\CXGameStateBase.cpp">
+      <Filter>Source\ChatX\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ChatX\Game\CXGameStateBase.h">
+      <Filter>Source\ChatX\Game</Filter>
+    </ClCompile>
     <Filter Include="Source\ChatX\Player">
       <UniqueIdentifier>{8187A3A0-11E1-3A02-B7A3-F087721C4CBB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ChatX\Player\CXPawn.cpp">
+      <Filter>Source\ChatX\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ChatX\Player\CXPawn.h">
+      <Filter>Source\ChatX\Player</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ChatX\Player\CXPlayerController.cpp">
       <Filter>Source\ChatX\Player</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ChatX\Player\CXPlayerController.h">
       <Filter>Source\ChatX\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ChatX\Player\CXPlayerState.cpp">
+      <Filter>Source\ChatX\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ChatX\Player\CXPlayerState.h">
+      <Filter>Source\ChatX\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\ChatX\UI">
+      <UniqueIdentifier>{F664B700-56F7-3022-AD24-A66B989CBAEE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ChatX\UI\CXChatInput.cpp">
+      <Filter>Source\ChatX\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ChatX\UI\CXChatInput.h">
+      <Filter>Source\ChatX\UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -5,7 +5,13 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/Maps/Chatting.umap"
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/BluePrint/Game/BP_GameModeBase.uasset",
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/BluePrint/Player/BP_PlayerController.uasset",
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/Maps/Chatting.umap",
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/BluePrint/UI/WBP_ChatInput.uasset",
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/BluePrint/Game/BP_GameStateBase.uasset",
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/BluePrint/Player/BP_PlayerState.uasset",
+				"C:/Users/user/Desktop/NBC/Chapter_4/ChatX/Content/ChatX/BluePrint/UI/WBP_NotificationText.uasset"
 			]
 		}
 	]

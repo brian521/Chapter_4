@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CHATX_CXGameModeBase_generated_h
 
-#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACXGameModeBase(); \
 	friend struct Z_Construct_UClass_ACXGameModeBase_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ACXGameModeBase)
 
 
-#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ACXGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~ACXGameModeBase();
 
 
-#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_12_PROLOG
-#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_15_GENERATED_BODY \
+#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_14_PROLOG
+#define FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Users_user_Desktop_NBC_Chapter_4_ChatX_Source_ChatX_Game_CXGameModeBase_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
