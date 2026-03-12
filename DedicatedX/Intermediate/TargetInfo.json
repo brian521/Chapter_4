@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "DedicatedX",
+			"Path": "..\\Source\\DedicatedX.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "DedicatedXEditor",
+			"Path": "..\\Source\\DedicatedXEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

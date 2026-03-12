@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DedicatedX.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DedicatedX.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DedicatedXEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DedicatedX">
+      <UniqueIdentifier>{6691B442-F1F3-31A4-BD3A-634D6F2EC62C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DedicatedX\DedicatedX.Build.cs">
+      <Filter>Source\DedicatedX</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DedicatedX\DedicatedX.cpp">
+      <Filter>Source\DedicatedX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\DedicatedX.h">
+      <Filter>Source\DedicatedX</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\Animation">
+      <UniqueIdentifier>{B7F35852-DB16-3DD7-A787-43D25D772405}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\Animation\DXAnimInstanceBase.cpp">
+      <Filter>Source\DedicatedX\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Animation\DXAnimInstanceBase.h">
+      <Filter>Source\DedicatedX\Animation</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\Character">
+      <UniqueIdentifier>{6DCFA5E6-A4DC-3033-831D-FDFB7D59B26E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\Character\DXPlayerCharacter.cpp">
+      <Filter>Source\DedicatedX\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Character\DXPlayerCharacter.h">
+      <Filter>Source\DedicatedX\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\Controller">
+      <UniqueIdentifier>{56A44B61-1EF1-3586-924D-1E8DBE9B4912}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\Controller\DXPlayerController.cpp">
+      <Filter>Source\DedicatedX\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Controller\DXPlayerController.h">
+      <Filter>Source\DedicatedX\Controller</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\GameMode">
+      <UniqueIdentifier>{8AC19579-BEC4-3D23-8618-DBADFE8FCD3F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\GameMode\DXGameModeBase.cpp">
+      <Filter>Source\DedicatedX\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\GameMode\DXGameModeBase.h">
+      <Filter>Source\DedicatedX\GameMode</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\GameState">
+      <UniqueIdentifier>{5580478A-5757-3CAB-B9FC-275F859F316B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\GameState\DXGameStateBase.cpp">
+      <Filter>Source\DedicatedX\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\GameState\DXGameStateBase.h">
+      <Filter>Source\DedicatedX\GameState</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\PlayerState">
+      <UniqueIdentifier>{13B3FA53-5891-36BB-993A-8F1ECFF27EF7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\PlayerState\DXPlayerState.cpp">
+      <Filter>Source\DedicatedX\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\PlayerState\DXPlayerState.h">
+      <Filter>Source\DedicatedX\PlayerState</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
