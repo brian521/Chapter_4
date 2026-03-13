@@ -13,5 +13,5 @@ UCLASS()
 class DEDICATEDX_API ADXGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
 };

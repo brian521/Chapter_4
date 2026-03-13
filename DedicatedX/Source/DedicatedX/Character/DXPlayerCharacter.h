@@ -51,6 +51,8 @@ private:
 
 	void HandleLookInput(const FInputActionValue& InValue);
 
+	void HandleLandMineInput(const FInputActionValue& InValue);
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Input")
 	TObjectPtr<UInputMappingContext> InputMappingContext;
@@ -64,6 +66,20 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Input")
 	TObjectPtr<UInputAction> JumpAction;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Input")
+	TObjectPtr<UInputAction> LandMineAction;
+
 #pragma endregion
 
+#pragma region LandMine
+
+private:
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerRPCSpawnLandMine();
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSubclassOf<AActor> LandMineClass;
+
+#pragma endregion
 };

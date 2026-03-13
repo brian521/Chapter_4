@@ -84,6 +84,21 @@
     <ClCompile Include="..\..\Source\DedicatedX\GameState\DXGameStateBase.h">
       <Filter>Source\DedicatedX\GameState</Filter>
     </ClCompile>
+    <Filter Include="Source\DedicatedX\Gimmick">
+      <UniqueIdentifier>{5EC2EA84-1D17-361B-894E-9AA7F6807ACD}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXBox.cpp">
+      <Filter>Source\DedicatedX\Gimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXBox.h">
+      <Filter>Source\DedicatedX\Gimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXLandMine.cpp">
+      <Filter>Source\DedicatedX\Gimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXLandMine.h">
+      <Filter>Source\DedicatedX\Gimmick</Filter>
+    </ClCompile>
     <Filter Include="Source\DedicatedX\PlayerState">
       <UniqueIdentifier>{13B3FA53-5891-36BB-993A-8F1ECFF27EF7}</UniqueIdentifier>
     </Filter>

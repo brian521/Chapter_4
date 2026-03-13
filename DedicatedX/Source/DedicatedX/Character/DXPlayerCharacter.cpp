@@ -8,6 +8,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "EnhancedInputComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Gimmick/DXLandMine.h"
 
 ADXPlayerCharacter::ADXPlayerCharacter()
 {
@@ -43,6 +45,8 @@ void ADXPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 	EIC->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);
 	EIC->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
+
+	EIC->BindAction(LandMineAction, ETriggerEvent::Started, this, &ThisClass::HandleLandMineInput);
 
 }
 
@@ -94,4 +98,28 @@ void ADXPlayerCharacter::HandleLookInput(const FInputActionValue& InValue)
 
 	AddControllerYawInput(InLookVector.X);
 	AddControllerPitchInput(InLookVector.Y);
+}
+
+void ADXPlayerCharacter::HandleLandMineInput(const FInputActionValue& InValue)
+{
+	if (IsLocallyControlled() == true)
+	{
+		ServerRPCSpawnLandMine();
+	}
+}
+
+void ADXPlayerCharacter::ServerRPCSpawnLandMine_Implementation()
+{
+	if (IsValid(LandMineClass) == true)
+	{
+		FVector SpawnedLocation = (GetActorLocation() + GetActorForwardVector() * 300.f) - FVector(0.f, 0.f, 90.f);
+		ADXLandMine* SpawnedLandMine = GetWorld()->SpawnActor<ADXLandMine>(LandMineClass, SpawnedLocation, FRotator::ZeroRotator);
+
+		SpawnedLandMine->SetOwner(this);
+	}
+}
+
+bool ADXPlayerCharacter::ServerRPCSpawnLandMine_Validate()
+{
+	return true;
 }
