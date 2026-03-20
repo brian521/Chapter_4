@@ -9,15 +9,30 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ACharacter;
+class ADXPlayerCharacter;
 #ifdef DEDICATEDX_DXPlayerCharacter_generated_h
 #error "DXPlayerCharacter.generated.h already included, missing '#pragma once' in DXPlayerCharacter.h"
 #endif
 #define DEDICATEDX_DXPlayerCharacter_generated_h
 
 #define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void ClientRPCPlayMeleeAttackMontage_Implementation(ADXPlayerCharacter* InTargetCharacter); \
+	virtual bool ServerRPCPerformMeleeHit_Validate(ACharacter* , float ); \
+	virtual void ServerRPCPerformMeleeHit_Implementation(ACharacter* InDamagedCharacters, float InCheckTime); \
+	virtual void MulticastRPCMeleeAttack_Implementation(); \
+	virtual bool ServerRPCMeleeAttack_Validate(float ); \
+	virtual void ServerRPCMeleeAttack_Implementation(float InStartMeleeAttackTime); \
 	virtual bool ServerRPCSpawnLandMine_Validate(); \
 	virtual void ServerRPCSpawnLandMine_Implementation(); \
-	DECLARE_FUNCTION(execServerRPCSpawnLandMine);
+	virtual void ServerRPCUpdateAimValue_Implementation(float const& InAimPitchValue); \
+	DECLARE_FUNCTION(execClientRPCPlayMeleeAttackMontage); \
+	DECLARE_FUNCTION(execServerRPCPerformMeleeHit); \
+	DECLARE_FUNCTION(execOnRep_CanAttack); \
+	DECLARE_FUNCTION(execMulticastRPCMeleeAttack); \
+	DECLARE_FUNCTION(execServerRPCMeleeAttack); \
+	DECLARE_FUNCTION(execServerRPCSpawnLandMine); \
+	DECLARE_FUNCTION(execServerRPCUpdateAimValue);
 
 
 #define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_18_CALLBACK_WRAPPERS
@@ -27,7 +42,14 @@ private: \
 	friend struct Z_Construct_UClass_ADXPlayerCharacter_Statics; \
 public: \
 	DECLARE_CLASS(ADXPlayerCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DedicatedX"), NO_API) \
-	DECLARE_SERIALIZER(ADXPlayerCharacter)
+	DECLARE_SERIALIZER(ADXPlayerCharacter) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		CurrentAimPitch=NETFIELD_REP_START, \
+		bCanAttack, \
+		NETFIELD_REP_END=bCanAttack	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
 #define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_18_ENHANCED_CONSTRUCTORS \

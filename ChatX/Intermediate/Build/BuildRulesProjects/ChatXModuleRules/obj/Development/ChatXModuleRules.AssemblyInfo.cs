@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatXModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aafc9988b3b1cada9fdb90bf598ec8065daccdd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7247e29ec8c5d8c3c862af5d0535405d3b26398c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatXModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatXModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

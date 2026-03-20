@@ -16,12 +16,244 @@ DEDICATEDX_API UClass* Z_Construct_UClass_ADXPlayerCharacter();
 DEDICATEDX_API UClass* Z_Construct_UClass_ADXPlayerCharacter_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 UPackage* Z_Construct_UPackage__Script_DedicatedX();
 // End Cross Module References
+
+// Begin Class ADXPlayerCharacter Function ClientRPCPlayMeleeAttackMontage
+struct DXPlayerCharacter_eventClientRPCPlayMeleeAttackMontage_Parms
+{
+	ADXPlayerCharacter* InTargetCharacter;
+};
+static const FName NAME_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage = FName(TEXT("ClientRPCPlayMeleeAttackMontage"));
+void ADXPlayerCharacter::ClientRPCPlayMeleeAttackMontage(ADXPlayerCharacter* InTargetCharacter)
+{
+	DXPlayerCharacter_eventClientRPCPlayMeleeAttackMontage_Parms Parms;
+	Parms.InTargetCharacter=InTargetCharacter;
+	UFunction* Func = FindFunctionChecked(NAME_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InTargetCharacter;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::NewProp_InTargetCharacter = { "InTargetCharacter", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DXPlayerCharacter_eventClientRPCPlayMeleeAttackMontage_Parms, InTargetCharacter), Z_Construct_UClass_ADXPlayerCharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::NewProp_InTargetCharacter,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "ClientRPCPlayMeleeAttackMontage", nullptr, nullptr, Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::PropPointers), sizeof(DXPlayerCharacter_eventClientRPCPlayMeleeAttackMontage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01040C41, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::Function_MetaDataParams) };
+static_assert(sizeof(DXPlayerCharacter_eventClientRPCPlayMeleeAttackMontage_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execClientRPCPlayMeleeAttackMontage)
+{
+	P_GET_OBJECT(ADXPlayerCharacter,Z_Param_InTargetCharacter);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientRPCPlayMeleeAttackMontage_Implementation(Z_Param_InTargetCharacter);
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function ClientRPCPlayMeleeAttackMontage
+
+// Begin Class ADXPlayerCharacter Function MulticastRPCMeleeAttack
+static const FName NAME_ADXPlayerCharacter_MulticastRPCMeleeAttack = FName(TEXT("MulticastRPCMeleeAttack"));
+void ADXPlayerCharacter::MulticastRPCMeleeAttack()
+{
+	UFunction* Func = FindFunctionChecked(NAME_ADXPlayerCharacter_MulticastRPCMeleeAttack);
+	ProcessEvent(Func,NULL);
+}
+struct Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "MulticastRPCMeleeAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00044C41, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execMulticastRPCMeleeAttack)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MulticastRPCMeleeAttack_Implementation();
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function MulticastRPCMeleeAttack
+
+// Begin Class ADXPlayerCharacter Function OnRep_CanAttack
+struct Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "OnRep_CanAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execOnRep_CanAttack)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CanAttack();
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function OnRep_CanAttack
+
+// Begin Class ADXPlayerCharacter Function ServerRPCMeleeAttack
+struct DXPlayerCharacter_eventServerRPCMeleeAttack_Parms
+{
+	float InStartMeleeAttackTime;
+};
+static const FName NAME_ADXPlayerCharacter_ServerRPCMeleeAttack = FName(TEXT("ServerRPCMeleeAttack"));
+void ADXPlayerCharacter::ServerRPCMeleeAttack(float InStartMeleeAttackTime)
+{
+	DXPlayerCharacter_eventServerRPCMeleeAttack_Parms Parms;
+	Parms.InStartMeleeAttackTime=InStartMeleeAttackTime;
+	UFunction* Func = FindFunctionChecked(NAME_ADXPlayerCharacter_ServerRPCMeleeAttack);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InStartMeleeAttackTime;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::NewProp_InStartMeleeAttackTime = { "InStartMeleeAttackTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DXPlayerCharacter_eventServerRPCMeleeAttack_Parms, InStartMeleeAttackTime), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::NewProp_InStartMeleeAttackTime,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "ServerRPCMeleeAttack", nullptr, nullptr, Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::PropPointers), sizeof(DXPlayerCharacter_eventServerRPCMeleeAttack_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::Function_MetaDataParams) };
+static_assert(sizeof(DXPlayerCharacter_eventServerRPCMeleeAttack_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execServerRPCMeleeAttack)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_InStartMeleeAttackTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRPCMeleeAttack_Validate(Z_Param_InStartMeleeAttackTime))
+	{
+		RPC_ValidateFailed(TEXT("ServerRPCMeleeAttack_Validate"));
+		return;
+	}
+	P_THIS->ServerRPCMeleeAttack_Implementation(Z_Param_InStartMeleeAttackTime);
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function ServerRPCMeleeAttack
+
+// Begin Class ADXPlayerCharacter Function ServerRPCPerformMeleeHit
+struct DXPlayerCharacter_eventServerRPCPerformMeleeHit_Parms
+{
+	ACharacter* InDamagedCharacters;
+	float InCheckTime;
+};
+static const FName NAME_ADXPlayerCharacter_ServerRPCPerformMeleeHit = FName(TEXT("ServerRPCPerformMeleeHit"));
+void ADXPlayerCharacter::ServerRPCPerformMeleeHit(ACharacter* InDamagedCharacters, float InCheckTime)
+{
+	DXPlayerCharacter_eventServerRPCPerformMeleeHit_Parms Parms;
+	Parms.InDamagedCharacters=InDamagedCharacters;
+	Parms.InCheckTime=InCheckTime;
+	UFunction* Func = FindFunctionChecked(NAME_ADXPlayerCharacter_ServerRPCPerformMeleeHit);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InDamagedCharacters;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InCheckTime;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::NewProp_InDamagedCharacters = { "InDamagedCharacters", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DXPlayerCharacter_eventServerRPCPerformMeleeHit_Parms, InDamagedCharacters), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::NewProp_InCheckTime = { "InCheckTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DXPlayerCharacter_eventServerRPCPerformMeleeHit_Parms, InCheckTime), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::NewProp_InDamagedCharacters,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::NewProp_InCheckTime,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "ServerRPCPerformMeleeHit", nullptr, nullptr, Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::PropPointers), sizeof(DXPlayerCharacter_eventServerRPCPerformMeleeHit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::Function_MetaDataParams) };
+static_assert(sizeof(DXPlayerCharacter_eventServerRPCPerformMeleeHit_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execServerRPCPerformMeleeHit)
+{
+	P_GET_OBJECT(ACharacter,Z_Param_InDamagedCharacters);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_InCheckTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRPCPerformMeleeHit_Validate(Z_Param_InDamagedCharacters,Z_Param_InCheckTime))
+	{
+		RPC_ValidateFailed(TEXT("ServerRPCPerformMeleeHit_Validate"));
+		return;
+	}
+	P_THIS->ServerRPCPerformMeleeHit_Implementation(Z_Param_InDamagedCharacters,Z_Param_InCheckTime);
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function ServerRPCPerformMeleeHit
 
 // Begin Class ADXPlayerCharacter Function ServerRPCSpawnLandMine
 static const FName NAME_ADXPlayerCharacter_ServerRPCSpawnLandMine = FName(TEXT("ServerRPCSpawnLandMine"));
@@ -63,12 +295,71 @@ DEFINE_FUNCTION(ADXPlayerCharacter::execServerRPCSpawnLandMine)
 }
 // End Class ADXPlayerCharacter Function ServerRPCSpawnLandMine
 
+// Begin Class ADXPlayerCharacter Function ServerRPCUpdateAimValue
+struct DXPlayerCharacter_eventServerRPCUpdateAimValue_Parms
+{
+	float InAimPitchValue;
+};
+static const FName NAME_ADXPlayerCharacter_ServerRPCUpdateAimValue = FName(TEXT("ServerRPCUpdateAimValue"));
+void ADXPlayerCharacter::ServerRPCUpdateAimValue(float const& InAimPitchValue)
+{
+	DXPlayerCharacter_eventServerRPCUpdateAimValue_Parms Parms;
+	Parms.InAimPitchValue=InAimPitchValue;
+	UFunction* Func = FindFunctionChecked(NAME_ADXPlayerCharacter_ServerRPCUpdateAimValue);
+	ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InAimPitchValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InAimPitchValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::NewProp_InAimPitchValue = { "InAimPitchValue", nullptr, (EPropertyFlags)0x0010000008000082, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DXPlayerCharacter_eventServerRPCUpdateAimValue_Parms, InAimPitchValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InAimPitchValue_MetaData), NewProp_InAimPitchValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::NewProp_InAimPitchValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "ServerRPCUpdateAimValue", nullptr, nullptr, Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::PropPointers), sizeof(DXPlayerCharacter_eventServerRPCUpdateAimValue_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00240C41, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::Function_MetaDataParams) };
+static_assert(sizeof(DXPlayerCharacter_eventServerRPCUpdateAimValue_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execServerRPCUpdateAimValue)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_InAimPitchValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ServerRPCUpdateAimValue_Implementation(Z_Param_InAimPitchValue);
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function ServerRPCUpdateAimValue
+
 // Begin Class ADXPlayerCharacter
 void ADXPlayerCharacter::StaticRegisterNativesADXPlayerCharacter()
 {
 	UClass* Class = ADXPlayerCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientRPCPlayMeleeAttackMontage", &ADXPlayerCharacter::execClientRPCPlayMeleeAttackMontage },
+		{ "MulticastRPCMeleeAttack", &ADXPlayerCharacter::execMulticastRPCMeleeAttack },
+		{ "OnRep_CanAttack", &ADXPlayerCharacter::execOnRep_CanAttack },
+		{ "ServerRPCMeleeAttack", &ADXPlayerCharacter::execServerRPCMeleeAttack },
+		{ "ServerRPCPerformMeleeHit", &ADXPlayerCharacter::execServerRPCPerformMeleeHit },
 		{ "ServerRPCSpawnLandMine", &ADXPlayerCharacter::execServerRPCSpawnLandMine },
+		{ "ServerRPCUpdateAimValue", &ADXPlayerCharacter::execServerRPCUpdateAimValue },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -115,7 +406,21 @@ struct Z_Construct_UClass_ADXPlayerCharacter_Statics
 		{ "Category", "DXPlayerCharacter|Input" },
 		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeleeAttackAction_MetaData[] = {
+		{ "Category", "DXPlayerCharacter|Input" },
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentAimPitch_MetaData[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LandMineClass_MetaData[] = {
+		{ "Category", "DXPlayerCharacter" },
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bCanAttack_MetaData[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeleeAttackMontage_MetaData[] = {
 		{ "Category", "DXPlayerCharacter" },
 		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
 	};
@@ -127,11 +432,22 @@ struct Z_Construct_UClass_ADXPlayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LandMineAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeleeAttackAction;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentAimPitch;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_LandMineClass;
+	static void NewProp_bCanAttack_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bCanAttack;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeleeAttackMontage;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage, "ClientRPCPlayMeleeAttackMontage" }, // 2269588859
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack, "MulticastRPCMeleeAttack" }, // 1694661744
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack, "OnRep_CanAttack" }, // 3979333503
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack, "ServerRPCMeleeAttack" }, // 2989505726
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit, "ServerRPCPerformMeleeHit" }, // 3931145204
 		{ &Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCSpawnLandMine, "ServerRPCSpawnLandMine" }, // 1896295914
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCUpdateAimValue, "ServerRPCUpdateAimValue" }, // 4039934199
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -146,7 +462,15 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADXPlayerChara
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0124080000010015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0124080000010015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_LandMineAction = { "LandMineAction", nullptr, (EPropertyFlags)0x0124080000010015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, LandMineAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LandMineAction_MetaData), NewProp_LandMineAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_MeleeAttackAction = { "MeleeAttackAction", nullptr, (EPropertyFlags)0x0124080000010015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, MeleeAttackAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeleeAttackAction_MetaData), NewProp_MeleeAttackAction_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_CurrentAimPitch = { "CurrentAimPitch", nullptr, (EPropertyFlags)0x0020080000000020, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, CurrentAimPitch), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentAimPitch_MetaData), NewProp_CurrentAimPitch_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_LandMineClass = { "LandMineClass", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, LandMineClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LandMineClass_MetaData), NewProp_LandMineClass_MetaData) };
+void Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_bCanAttack_SetBit(void* Obj)
+{
+	((ADXPlayerCharacter*)Obj)->bCanAttack = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_bCanAttack = { "bCanAttack", "OnRep_CanAttack", (EPropertyFlags)0x0020080100000020, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(uint8), sizeof(ADXPlayerCharacter), &Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_bCanAttack_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bCanAttack_MetaData), NewProp_bCanAttack_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_MeleeAttackMontage = { "MeleeAttackMontage", nullptr, (EPropertyFlags)0x0124080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADXPlayerCharacter, MeleeAttackMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeleeAttackMontage_MetaData), NewProp_MeleeAttackMontage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADXPlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_SpringArm,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_Camera,
@@ -155,7 +479,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADXPlayer
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_LookAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_JumpAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_LandMineAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_MeleeAttackAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_CurrentAimPitch,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_LandMineClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_bCanAttack,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADXPlayerCharacter_Statics::NewProp_MeleeAttackMontage,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADXPlayerCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ADXPlayerCharacter_Statics::DependentSingletons[])() = {
@@ -190,6 +518,15 @@ template<> DEDICATEDX_API UClass* StaticClass<ADXPlayerCharacter>()
 {
 	return ADXPlayerCharacter::StaticClass();
 }
+void ADXPlayerCharacter::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
+{
+	static const FName Name_CurrentAimPitch(TEXT("CurrentAimPitch"));
+	static const FName Name_bCanAttack(TEXT("bCanAttack"));
+	const bool bIsValid = true
+		&& Name_CurrentAimPitch == ClassReps[(int32)ENetFields_Private::CurrentAimPitch].Property->GetFName()
+		&& Name_bCanAttack == ClassReps[(int32)ENetFields_Private::bCanAttack].Property->GetFName();
+	checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ADXPlayerCharacter"));
+}
 DEFINE_VTABLE_PTR_HELPER_CTOR(ADXPlayerCharacter);
 ADXPlayerCharacter::~ADXPlayerCharacter() {}
 // End Class ADXPlayerCharacter
@@ -198,10 +535,10 @@ ADXPlayerCharacter::~ADXPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADXPlayerCharacter, ADXPlayerCharacter::StaticClass, TEXT("ADXPlayerCharacter"), &Z_Registration_Info_UClass_ADXPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADXPlayerCharacter), 1132622482U) },
+		{ Z_Construct_UClass_ADXPlayerCharacter, ADXPlayerCharacter::StaticClass, TEXT("ADXPlayerCharacter"), &Z_Registration_Info_UClass_ADXPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADXPlayerCharacter), 3503426799U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_356742830(TEXT("/Script/DedicatedX"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_4014595103(TEXT("/Script/DedicatedX"),
 	Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

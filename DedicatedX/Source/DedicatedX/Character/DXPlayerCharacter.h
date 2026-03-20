@@ -26,6 +26,10 @@ public:
 
 	virtual void BeginPlay() override;
 
+	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
+
+	virtual void Tick(float DeltaTime) override;
+
 #pragma endregion
 
 #pragma region DXPlayerCharacter Components
@@ -46,12 +50,20 @@ protected:
 
 #pragma region Input
 
+public:
+	float GetCurrentAimPitch() const { return CurrentAimPitch; }
+
 private:
 	void HandleMoveInput(const FInputActionValue& InValue);
 
 	void HandleLookInput(const FInputActionValue& InValue);
 
 	void HandleLandMineInput(const FInputActionValue& InValue);
+
+	UFUNCTION(Server, Unreliable)
+	void ServerRPCUpdateAimValue(const float& InAimPitchValue);
+
+	void HandleMeleeAttackInput(const FInputActionValue& InValue);
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Input")
@@ -69,6 +81,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Input")
 	TObjectPtr<UInputAction> LandMineAction;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Input")
+	TObjectPtr<UInputAction> MeleeAttackAction;
+
+	UPROPERTY(Replicated)
+	float CurrentAimPitch = 0.f;
+
+	float PreviousAimPitch = 0.f;
+
 #pragma endregion
 
 #pragma region LandMine
@@ -82,4 +102,49 @@ protected:
 	TSubclassOf<AActor> LandMineClass;
 
 #pragma endregion
+
+#pragma region Attack
+
+public:
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+
+	void CheckMeleeAttackHit();
+
+private:
+	void DrawDebugMeleeAttack(const FColor& DrawColor, FVector TraceStart, FVector TraceEnd, FVector Forward);
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerRPCMeleeAttack(float InStartMeleeAttackTime);
+
+	UFUNCTION(NetMulticast, Unreliable)
+	void MulticastRPCMeleeAttack();
+
+	UFUNCTION()
+	void OnRep_CanAttack();
+
+	void PlayMeleeAttackMontage();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerRPCPerformMeleeHit(ACharacter* InDamagedCharacters, float InCheckTime);
+
+	UFUNCTION(Client, Unreliable)
+	void ClientRPCPlayMeleeAttackMontage(ADXPlayerCharacter* InTargetCharacter);
+
+protected:
+	UPROPERTY(ReplicatedUsing = OnRep_CanAttack)
+	uint8 bCanAttack : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TObjectPtr<UAnimMontage> MeleeAttackMontage;
+
+	float MeleeAttackMontagePlayTime;
+
+	float LastStartMeleeAttackTime;
+
+	float MeleeAttackTimeDifference;
+
+	float MinAllowedTimeForMeleeAttack;
+
+#pragma endregion
+
 };
