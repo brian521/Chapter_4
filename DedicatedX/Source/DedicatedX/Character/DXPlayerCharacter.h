@@ -11,6 +11,9 @@ class UCameraComponent;
 class USpringArmComponent;
 class UInputMappingContext;
 class UInputAction;
+class UDXStatusComponent;
+class UDXHPTextWidgetComponent;
+class UUW_HPText;
 
 UCLASS()
 class DEDICATEDX_API ADXPlayerCharacter : public ACharacter
@@ -46,6 +49,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Components")
 	TObjectPtr<UCameraComponent> Camera;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Components")
+	TObjectPtr<UDXStatusComponent> StatusComponent;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "DXPlayerCharacter|Components")
+	TObjectPtr<UDXHPTextWidgetComponent> HPTextWidgetComponent;
 #pragma endregion
 
 #pragma region Input
@@ -147,4 +155,12 @@ protected:
 
 #pragma endregion
 
+#pragma region HPWidget
+
+public:
+	void SetHPTextWidget(UUW_HPText* InHPTextWidget);
+
+	void TakeBuff(float InBuffValue);
+
+#pragma endregion
 };

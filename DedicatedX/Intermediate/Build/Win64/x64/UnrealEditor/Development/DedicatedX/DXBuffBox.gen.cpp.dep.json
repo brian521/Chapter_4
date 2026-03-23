@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\dxbuffbox.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\x64\\dedicatedxeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\dedicatedx\\definitions.dedicatedx.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\source\\dedicatedx\\gimmick\\dxbuffbox.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\dxbuffbox.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

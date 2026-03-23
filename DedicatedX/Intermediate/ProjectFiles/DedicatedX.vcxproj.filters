@@ -57,6 +57,21 @@
     <ClCompile Include="..\..\Source\DedicatedX\Character\DXPlayerCharacter.h">
       <Filter>Source\DedicatedX\Character</Filter>
     </ClCompile>
+    <Filter Include="Source\DedicatedX\Component">
+      <UniqueIdentifier>{D4215AA5-9CA7-3296-A534-0E2AF9889308}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\Component\DXHPTextWidgetComponent.cpp">
+      <Filter>Source\DedicatedX\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Component\DXHPTextWidgetComponent.h">
+      <Filter>Source\DedicatedX\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Component\DXStatusComponent.cpp">
+      <Filter>Source\DedicatedX\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Component\DXStatusComponent.h">
+      <Filter>Source\DedicatedX\Component</Filter>
+    </ClCompile>
     <Filter Include="Source\DedicatedX\Controller">
       <UniqueIdentifier>{56A44B61-1EF1-3586-924D-1E8DBE9B4912}</UniqueIdentifier>
     </Filter>
@@ -93,6 +108,12 @@
     <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXBox.h">
       <Filter>Source\DedicatedX\Gimmick</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXBuffBox.cpp">
+      <Filter>Source\DedicatedX\Gimmick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXBuffBox.h">
+      <Filter>Source\DedicatedX\Gimmick</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\DedicatedX\Gimmick\DXLandMine.cpp">
       <Filter>Source\DedicatedX\Gimmick</Filter>
     </ClCompile>
@@ -107,6 +128,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\DedicatedX\PlayerState\DXPlayerState.h">
       <Filter>Source\DedicatedX\PlayerState</Filter>
+    </ClCompile>
+    <Filter Include="Source\DedicatedX\UI">
+      <UniqueIdentifier>{149FDF4E-604F-360A-B142-55344583D2DB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\UI\UW_HPText.cpp">
+      <Filter>Source\DedicatedX\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\UI\UW_HPText.h">
+      <Filter>Source\DedicatedX\UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
