@@ -81,6 +81,12 @@
     <ClCompile Include="..\..\Source\DedicatedX\Controller\DXPlayerController.h">
       <Filter>Source\DedicatedX\Controller</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Controller\DXTitlePlayerController.cpp">
+      <Filter>Source\DedicatedX\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\Controller\DXTitlePlayerController.h">
+      <Filter>Source\DedicatedX\Controller</Filter>
+    </ClCompile>
     <Filter Include="Source\DedicatedX\GameMode">
       <UniqueIdentifier>{8AC19579-BEC4-3D23-8618-DBADFE8FCD3F}</UniqueIdentifier>
     </Filter>
@@ -132,10 +138,22 @@
     <Filter Include="Source\DedicatedX\UI">
       <UniqueIdentifier>{149FDF4E-604F-360A-B142-55344583D2DB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\DedicatedX\UI\UW_GameResult.cpp">
+      <Filter>Source\DedicatedX\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\UI\UW_GameResult.h">
+      <Filter>Source\DedicatedX\UI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\DedicatedX\UI\UW_HPText.cpp">
       <Filter>Source\DedicatedX\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\DedicatedX\UI\UW_HPText.h">
+      <Filter>Source\DedicatedX\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\UI\UW_TitleLayout.cpp">
+      <Filter>Source\DedicatedX\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DedicatedX\UI\UW_TitleLayout.h">
       <Filter>Source\DedicatedX\UI</Filter>
     </ClCompile>
   </ItemGroup>

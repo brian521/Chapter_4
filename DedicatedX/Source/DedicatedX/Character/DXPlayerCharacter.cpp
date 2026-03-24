@@ -20,6 +20,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "UI/UW_HPText.h"
+#include "Controller/DXPlayerController.h"
+#include "GameMode/DXGameModeBase.h"
+#include "GameState/DXGameStateBase.h"
 
 ADXPlayerCharacter::ADXPlayerCharacter()
 	: bCanAttack(true)
@@ -95,6 +98,8 @@ void ADXPlayerCharacter::BeginPlay()
 			MeleeAttackMontagePlayTime = MeleeAttackMontage->GetPlayLength();
 		}
 	}
+
+	StatusComponent->OnOutOfCurrentHP.AddUObject(this, &ThisClass::OnDeath);
 }
 
 void ADXPlayerCharacter::GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const
@@ -192,7 +197,11 @@ float ADXPlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Dam
 	UKismetSystemLibrary::PrintString(GetWorld(), FString::Printf(TEXT("TakeDamage: %f"), DamageAmount), true, true, FLinearColor::Red, 5.f);
 
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	StatusComponent->ApplyDamage(ActualDamage);
+	ADXGameStateBase* DXGameState = Cast<ADXGameStateBase>(UGameplayStatics::GetGameState(this));
+	if (IsValid(DXGameState) == true && DXGameState->MatchState == EMatchState::Playing)
+	{
+		StatusComponent->ApplyDamage(ActualDamage);
+	}
 	return ActualDamage;
 }
 
@@ -231,6 +240,15 @@ void ADXPlayerCharacter::CheckMeleeAttackHit()
 
 		FColor DrawColor = bIsHitDetected ? FColor::Green : FColor::Red;
 		DrawDebugMeleeAttack(DrawColor, Start, End, Forward);
+	}
+}
+
+void ADXPlayerCharacter::OnDeath()
+{
+	ADXPlayerController* PlayerController = GetController<ADXPlayerController>();
+	if (IsValid(PlayerController) == true && HasAuthority() == true)
+	{
+		PlayerController->OnCharacterDead();
 	}
 }
 

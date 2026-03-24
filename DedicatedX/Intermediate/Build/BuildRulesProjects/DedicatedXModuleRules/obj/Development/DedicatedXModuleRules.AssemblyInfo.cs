@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DedicatedXModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7247e29ec8c5d8c3c862af5d0535405d3b26398c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3616194ec7918ce33f392c7e87ba0607c0fa0805")]
 [assembly: System.Reflection.AssemblyProductAttribute("DedicatedXModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DedicatedXModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

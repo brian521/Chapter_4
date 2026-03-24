@@ -112,6 +112,35 @@ DEFINE_FUNCTION(ADXPlayerCharacter::execMulticastRPCMeleeAttack)
 }
 // End Class ADXPlayerCharacter Function MulticastRPCMeleeAttack
 
+// Begin Class ADXPlayerCharacter Function OnDeath
+struct Z_Construct_UFunction_ADXPlayerCharacter_OnDeath_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/DXPlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADXPlayerCharacter_OnDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADXPlayerCharacter, nullptr, "OnDeath", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADXPlayerCharacter_OnDeath_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADXPlayerCharacter_OnDeath_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ADXPlayerCharacter_OnDeath()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADXPlayerCharacter_OnDeath_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADXPlayerCharacter::execOnDeath)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDeath();
+	P_NATIVE_END;
+}
+// End Class ADXPlayerCharacter Function OnDeath
+
 // Begin Class ADXPlayerCharacter Function OnRep_CanAttack
 struct Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack_Statics
 {
@@ -357,6 +386,7 @@ void ADXPlayerCharacter::StaticRegisterNativesADXPlayerCharacter()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "ClientRPCPlayMeleeAttackMontage", &ADXPlayerCharacter::execClientRPCPlayMeleeAttackMontage },
 		{ "MulticastRPCMeleeAttack", &ADXPlayerCharacter::execMulticastRPCMeleeAttack },
+		{ "OnDeath", &ADXPlayerCharacter::execOnDeath },
 		{ "OnRep_CanAttack", &ADXPlayerCharacter::execOnRep_CanAttack },
 		{ "ServerRPCMeleeAttack", &ADXPlayerCharacter::execServerRPCMeleeAttack },
 		{ "ServerRPCPerformMeleeHit", &ADXPlayerCharacter::execServerRPCPerformMeleeHit },
@@ -457,6 +487,7 @@ struct Z_Construct_UClass_ADXPlayerCharacter_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ADXPlayerCharacter_ClientRPCPlayMeleeAttackMontage, "ClientRPCPlayMeleeAttackMontage" }, // 2269588859
 		{ &Z_Construct_UFunction_ADXPlayerCharacter_MulticastRPCMeleeAttack, "MulticastRPCMeleeAttack" }, // 1694661744
+		{ &Z_Construct_UFunction_ADXPlayerCharacter_OnDeath, "OnDeath" }, // 3258279190
 		{ &Z_Construct_UFunction_ADXPlayerCharacter_OnRep_CanAttack, "OnRep_CanAttack" }, // 3979333503
 		{ &Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCMeleeAttack, "ServerRPCMeleeAttack" }, // 2989505726
 		{ &Z_Construct_UFunction_ADXPlayerCharacter_ServerRPCPerformMeleeHit, "ServerRPCPerformMeleeHit" }, // 3931145204
@@ -553,10 +584,10 @@ ADXPlayerCharacter::~ADXPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADXPlayerCharacter, ADXPlayerCharacter::StaticClass, TEXT("ADXPlayerCharacter"), &Z_Registration_Info_UClass_ADXPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADXPlayerCharacter), 3506822634U) },
+		{ Z_Construct_UClass_ADXPlayerCharacter, ADXPlayerCharacter::StaticClass, TEXT("ADXPlayerCharacter"), &Z_Registration_Info_UClass_ADXPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADXPlayerCharacter), 576017051U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_568038943(TEXT("/Script/DedicatedX"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_1635404474(TEXT("/Script/DedicatedX"),
 	Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_Character_DXPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-DedicatedX-6325.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\user\Desktop\NBC\Chapter_4\DedicatedX\Intermediate\Build\Win64\x64\DedicatedXEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\user\Desktop\NBC\Chapter_4\DedicatedX\Intermediate\Build\Win64\x64\UnrealEditor\Development\DedicatedX\Module.DedicatedX.cpp.obj"
+"C:\Users\user\Desktop\NBC\Chapter_4\DedicatedX\Intermediate\Build\Win64\x64\UnrealEditor\Development\DedicatedX\Default.rc2.res"
+/OUT:"C:\Users\user\Desktop\NBC\Chapter_4\DedicatedX\Intermediate\Build\Win64\x64\UnrealEditor\Development\DedicatedX\UnrealEditor-DedicatedX-6325.lib"

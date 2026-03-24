@@ -131,7 +131,13 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
             "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\source\\dedicatedx\\ui\\uw_hptext.h",
-            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\uw_hptext.generated.h"
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\uw_hptext.generated.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\source\\dedicatedx\\controller\\dxplayercontroller.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\dxplayercontroller.generated.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\source\\dedicatedx\\gamemode\\dxgamemodebase.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\dxgamemodebase.generated.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\source\\dedicatedx\\gamestate\\dxgamestatebase.h",
+            "c:\\users\\user\\desktop\\nbc\\chapter_4\\dedicatedx\\intermediate\\build\\win64\\unrealeditor\\inc\\dedicatedx\\uht\\dxgamestatebase.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

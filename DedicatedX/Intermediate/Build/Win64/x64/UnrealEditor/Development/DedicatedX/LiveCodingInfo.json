@@ -1,5 +1,40 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.DedicatedX.cpp.obj": [
+			"DedicatedX.init.gen.cpp.obj",
+			"DXAnimInstanceBase.gen.cpp.obj",
+			"DXBox.gen.cpp.obj",
+			"DXBuffBox.gen.cpp.obj",
+			"DXGameModeBase.gen.cpp.obj",
+			"DXGameStateBase.gen.cpp.obj",
+			"DXHPTextWidgetComponent.gen.cpp.obj",
+			"DXLandMine.gen.cpp.obj",
+			"DXPlayerCharacter.gen.cpp.obj",
+			"DXPlayerController.gen.cpp.obj",
+			"DXPlayerState.gen.cpp.obj",
+			"DXStatusComponent.gen.cpp.obj",
+			"DXTitlePlayerController.gen.cpp.obj",
+			"UW_GameResult.gen.cpp.obj",
+			"UW_HPText.gen.cpp.obj",
+			"UW_TitleLayout.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"DXAnimInstanceBase.cpp.obj",
+			"DXPlayerCharacter.cpp.obj",
+			"DXHPTextWidgetComponent.cpp.obj",
+			"DXStatusComponent.cpp.obj",
+			"DXPlayerController.cpp.obj",
+			"DXTitlePlayerController.cpp.obj",
+			"DedicatedX.cpp.obj",
+			"DXGameModeBase.cpp.obj",
+			"DXGameStateBase.cpp.obj",
+			"DXBox.cpp.obj",
+			"DXBuffBox.cpp.obj",
+			"DXLandMine.cpp.obj",
+			"DXPlayerState.cpp.obj",
+			"UW_GameResult.cpp.obj",
+			"UW_HPText.cpp.obj",
+			"UW_TitleLayout.cpp.obj"
+		]
 	}
 }

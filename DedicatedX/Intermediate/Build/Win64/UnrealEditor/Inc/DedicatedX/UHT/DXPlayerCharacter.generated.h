@@ -31,6 +31,7 @@ class ADXPlayerCharacter;
 	DECLARE_FUNCTION(execOnRep_CanAttack); \
 	DECLARE_FUNCTION(execMulticastRPCMeleeAttack); \
 	DECLARE_FUNCTION(execServerRPCMeleeAttack); \
+	DECLARE_FUNCTION(execOnDeath); \
 	DECLARE_FUNCTION(execServerRPCSpawnLandMine); \
 	DECLARE_FUNCTION(execServerRPCUpdateAimValue);
 

@@ -14,16 +14,23 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define DEDICATEDX_DXGameStateBase_generated_h
 
-#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADXGameStateBase(); \
 	friend struct Z_Construct_UClass_ADXGameStateBase_Statics; \
 public: \
 	DECLARE_CLASS(ADXGameStateBase, AGameStateBase, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/DedicatedX"), NO_API) \
-	DECLARE_SERIALIZER(ADXGameStateBase)
+	DECLARE_SERIALIZER(ADXGameStateBase) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		AlivePlayerControllerCount=NETFIELD_REP_START, \
+		MatchState, \
+		NETFIELD_REP_END=MatchState	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_25_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ADXGameStateBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +44,12 @@ public: \
 	NO_API virtual ~ADXGameStateBase();
 
 
-#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_12_PROLOG
-#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_15_GENERATED_BODY \
+#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_22_PROLOG
+#define FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -52,5 +59,16 @@ template<> DEDICATEDX_API UClass* StaticClass<class ADXGameStateBase>();
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Users_user_Desktop_NBC_Chapter_4_DedicatedX_Source_DedicatedX_GameState_DXGameStateBase_h
 
+
+#define FOREACH_ENUM_EMATCHSTATE(op) \
+	op(EMatchState::None) \
+	op(EMatchState::Waiting) \
+	op(EMatchState::Playing) \
+	op(EMatchState::Ending) \
+	op(EMatchState::End) 
+
+enum class EMatchState : uint8;
+template<> struct TIsUEnumClass<EMatchState> { enum { Value = true }; };
+template<> DEDICATEDX_API UEnum* StaticEnum<EMatchState>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
